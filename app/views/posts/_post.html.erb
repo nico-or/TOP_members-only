@@ -1,6 +1,10 @@
 
-<% author = post.user %>
-<% author_name = "#{author.first_name} #{author.last_name}" %>
+<% if session[:user_id] %>
+  <% author = post.user %>
+  <% author_name = "#{author.first_name} #{author.last_name}" %>
+<% else %>
+  <% author_name = '[REDACTED]' %>
+<% end %>
 
 <div>
   </div>
@@ -8,6 +12,6 @@
   <div>
   <p>
     <strong>Author: </strong>
-    <%= author_name%>
+    <%= author_name %>
   </p>
 </div>
