@@ -1,7 +1,6 @@
 
 <% if session[:user_id] %>
-  <% author = post.user %>
-  <% author_name = "#{author.first_name} #{author.last_name}" %>
+  <% author_name = post.user.full_name %>
 <% else %>
   <% author_name = '[REDACTED]' %>
 <% end %>

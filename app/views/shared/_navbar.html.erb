@@ -6,7 +6,7 @@
         <ul class="navbar-nav">
           <% if session[:user_id] %>
             <li class="nav-item">
-              <div class="nav-link bg-primary rounded-pill"> Welcome, <%= session[:user_name] %> </div>
+              <div class="nav-link bg-primary rounded-pill"> Welcome, <%= User.find(session[:user_id]).full_name %> </div>
             </li>
             <li class="nav-item">
               <%= link_to "Log out", logout_path, class: "nav-link" %>
