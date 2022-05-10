@@ -5,12 +5,14 @@
   <% author_name = '[REDACTED]' %>
 <% end %>
 
-<div>
+<div class="card border-secondary">
+  <div class="card-body">
+    <div class="card-text">
+      <%= post.body %>
+    </div>
   </div>
-    <%= post.body %>
-  <div>
-  <p>
+  <div class="card-footer">
     <strong>Author: </strong>
     <%= author_name %>
-  </p>
+  </div>
 </div>
