@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implementation of a simple webapp with authentication.
 
-Things you may want to cover:
+Technical requirements:
+- External users:
+  - Can't see the post author
+  - Can't create new posts
+  - Can signup
 
-* Ruby version
+- Signed-up users:
+  - Can see post author
+  - Can create new posts
+  - Can login and logout
 
-* System dependencies
+Implementation notes:
+- basic Bootstrap UI
+- Authentication was implemented using the rails ```has_secure_password``` method.
+  - Implementation based on [Railcasts #250](http://railscasts.com/episodes/250-authentication-from-scratch-revised?autoplay=true)
+  - At the time of writing, the Devise gem has integration issues with Rails 7. In particular, the logout functionality.
 
-* Configuration
+---
 
-* Database creation
+This repo is an implementation of the [Members Only](https://www.theodinproject.com/lessons/ruby-on-rails-members-only) project.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is part of [The Odin Project](https://www.theodinproject.com/).
