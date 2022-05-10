@@ -4,6 +4,9 @@ class PostsController < ApplicationController
   end
 
   def new
+    unless session[:user_id]
+      redirect_to signup_path, alert: "You must sign up to write a Post."
+    end
     @post = Post.new
   end
 
